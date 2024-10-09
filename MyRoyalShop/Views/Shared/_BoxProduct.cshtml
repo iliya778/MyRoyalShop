@@ -1,0 +1,13 @@
+﻿@using MyRoyalShop.DataLayer.Domain
+@model Product
+
+<div class="card col-4" style="width: 18rem;">
+    <img class="card-img-top" src="/ProductImages/@Model.ImageName" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">
+            <a href="/Product/@Model.ProductId">@Model.Title</a>
+        </h5>
+        <p class="card-text">@Model.Price.ToString("#,0 تومان")</p>
+        <a href="#" class="btn btn-primary">افزودن به سبد خرید</a>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+﻿@using MyRoyalShop.Core.Utilities
+@model IEnumerable<MyRoyalShop.DataLayer.Domain.User>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a href="/Admin/Users/Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserEmail)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.RegisterDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsAdmin)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserEmail)
+            </td>
+           
+            <td>
+                 @item.RegisterDate.ToShamsi()
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsAdmin)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                    <a href="/Admin/Users/Edit/@item.UserId">Edit</a> |
+                    <a href="/Admin/Users/Detail/@item.UserId">Details</a> |
+                    <a href="/Admin/Users/Delete/@item.UserId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

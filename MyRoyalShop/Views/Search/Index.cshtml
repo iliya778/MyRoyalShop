@@ -1,0 +1,14 @@
+﻿@using MyRoyalShop.DataLayer.Domain
+@model IEnumerable<Product>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <partial name="_BoxProduct" model="@item" />
+    }
+</div>

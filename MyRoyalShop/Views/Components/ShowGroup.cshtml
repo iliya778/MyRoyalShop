@@ -1,0 +1,20 @@
+﻿@using MyRoyalShop.DataLayer.ViewModels
+@model IEnumerable<ShowGroupViewModel>
+
+
+
+
+
+
+
+<div class="list-group">
+    <button type="button" class="list-group-item list-group-item-action active">
+        سر گروه ها
+    </button>
+    @foreach (var item in Model)
+    {
+        <a href="/Group/@item.GroupId/@item.GroupTitle" class="list-group-item list-group-item-action list-group-item-light">@item.GroupTitle
+            <span class="badge badge-primary badge-pill">@item.ProductCount</span>
+        </a>
+    }
+</div>
