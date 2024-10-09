@@ -10,5 +10,7 @@ namespace MyRoyalShop.Areas.Admin.Controllers
         {
             return View();
         }
+        // another comment to see the changes
+
     }
 }
