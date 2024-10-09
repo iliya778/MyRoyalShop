@@ -10,6 +10,12 @@ namespace MyRoyalShop.Areas.Admin.Controllers
         {
             return View();
         }
+
+        public IActionResult actionResult()
+        {
+            return View();
+        }
+
         // another comment to see the changes
 
     }
