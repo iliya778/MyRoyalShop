@@ -20,7 +20,7 @@ namespace MyRoyalShop.Core.Sender
             mail.IsBodyHtml = true;
 
             SmtpServer.Port = 587;
-            SmtpServer.Credentials = new System.Net.NetworkCredential("iliyamokhtari13841384@gmail.com", "plxe idwq otjg frmd");
+            SmtpServer.Credentials = new System.Net.NetworkCredential("Example@gmail.com", "Password Example");
             SmtpServer.EnableSsl = true;
             SmtpServer.Send(mail);
         }
